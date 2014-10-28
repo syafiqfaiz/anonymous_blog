@@ -3,5 +3,27 @@
   <p>Hello</p>
 
   <a href='/post/all'><button type="button">View all post</button></a>
-  <a href='/post/create_new'><button type="button">Create new post</button></a>
+  <a href='/posts/create_new'><button type="button">Create new post</button></a>
+
+  <table>
+    <tr>
+      <th>All post</th>
+    </tr>
+      <%@all_post.each do |e|  %>
+    <tr>
+      <th><a href='/posts/<%=e.id%>'><%=e.title%></a></th>
+      <%end%>
+    </tr>
+  </table>
+<br><br><br>
+  <table>
+    <tr>
+      <th>All tag</th>
+    </tr>
+      <%@all_tag.each do |e|  %>
+    <tr>
+      <th><a href='/tag/<%=e.id%>'><%=e.name%></a></th>
+      <%end%>
+    </tr>
+  </table>
 </div>

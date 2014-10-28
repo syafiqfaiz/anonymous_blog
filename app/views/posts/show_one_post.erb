@@ -1,0 +1,10 @@
+<div class="container">
+  <h2><%=@post.title%></h2><br>
+  <p><%=@post.body%></p><br>
+  <p>tag</p>
+  <% @post.tags.each do |e| %>
+   <%= e.name %>,
+  <%end%><br><br>
+  <a href='/posts/edit/<%=@post.id%>'><button type="button">Edit post.</button></a>
+  <a href='/posts/delete/<%=@post.id%>'><button type="button">Delete post.</button></a>
+</div>

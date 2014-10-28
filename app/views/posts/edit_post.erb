@@ -1,0 +1,33 @@
+<div class="container">
+  <center><h1>Edit post.</h1></center>
+
+
+
+ <form action="/posts/edit_post/succes/<%=@post.id%>" method="post" >
+    <h2>Edit your post in here.</h2>
+    <br>
+    <h3>Please fill all the texts in the fields.</h3>
+    <br>
+
+    <label>
+        <span>Title :</span><br>
+        <input id="title" type="text" name="title" value=<%=@post.title%> />
+    </label>
+    <br><br>
+    <label>
+        <span>Article :</span><br>
+        <textarea rows="4" cols="50" id="body" name="body" value=<%=@post.body%>></textarea>
+    </label>
+    <br><br>
+     <label>
+        <span>Tag :</span><br>
+        <input id="tag" type="text" name="tag" value=<%=@post.title%>/>
+    </label>
+    <br>
+    <br>
+     <label>
+        <span>&nbsp;</span>
+        <input type="submit" class="button" value="Save changes" />
+    </label>
+</form>
+</div>

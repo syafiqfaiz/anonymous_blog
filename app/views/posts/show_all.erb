@@ -1,0 +1,12 @@
+<div class="container">
+  <% @all_post.each do |e| %>
+    <h1><%= e.title %></h1><br>
+    <%= e.body %><br><br>
+    <p>tag</p>
+    <% e.tags.each do |e| %>
+    <%= e.name %>
+    <%end%>
+    <hr>
+
+  <%end%>
+</div>
