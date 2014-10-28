@@ -4,7 +4,7 @@
     <%= e.body %><br><br>
     <p>tag</p>
     <% e.tags.each do |e| %>
-    <%= e.name %>
+    <a href='/tag/<%=e.id%>'><%= e.name %></a>
     <%end%>
     <hr>
 
